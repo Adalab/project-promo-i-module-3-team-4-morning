@@ -1,0 +1,107 @@
+.section--fill {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  width: 100%;
+
+  border-top: 1px solid $color-text-medium;
+}
+
+.form-object {
+  color: $color-secondary-dark;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  padding-top: 25px;
+
+  label {
+    color: $color-primary-dark;
+    font-family: $font-primary;
+    font-size: 14px;
+  }
+  input {
+    border: $color-primary-light 1px solid;
+    margin-top: 7px;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 30px;
+    font-family: $font-primary;
+    padding-left: 8px;
+    background-color: transparent;
+  }
+  &--file {
+    position: relative;
+  }
+  &--file__input {
+    position: absolute;
+    opacity: 0;
+    color: transparent;
+  }
+  &--button {
+    width: 140px;
+    height: 30px;
+    background-color: $color-secondary-dark;
+    color: $color-secondary-light;
+    font-family: $font-primary;
+    font-size: 14px;
+    width: 140px;
+    height: 30px;
+    border: 0px;
+    border-radius: 3px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
+    margin-right: 20px;
+
+    &__container {
+      display: flex;
+      align-items: center;
+      margin-top: 7px;
+      margin-bottom: 20px;
+    }
+    &__box {
+      border: $color-primary-light 1px solid;
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  &--icon1 {
+    color: $color-secondary-dark;
+    width: 21px;
+    height: 18px;
+  }
+  &--text {
+    font-family: $font-primary;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 600;
+    color: #54585a;
+    position: absolute;
+    left: 51px;
+  }
+  &--icon2 {
+    color: #54585a;
+    width: 16px;
+    height: 18px;
+    font-weight: normal;
+    text-align: right;
+  }
+}
+.fas.fa-angle-up.closed {
+  transform: rotate(180deg);
+}
+@media all and(min-width:768px) {
+  .section--fill {
+    margin-right: 30px;
+  }
+  .title--text {
+    position: absolute;
+    left: 71px;
+  }
+}

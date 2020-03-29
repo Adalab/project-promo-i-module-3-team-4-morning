@@ -1,0 +1,41 @@
+// PREVIEW
+.card-sample {
+  &--button {
+    &:hover {
+      background-color: $color-secondary-light;
+      transform: scale(1.1);
+    }
+    &:active {
+      background-color: transparent;
+      transform: scale(1);
+    }
+  }
+  &--item {
+    &__link1,
+    &__link2,
+    &__link3,
+    &__link4 {
+      &:hover {
+        background-color: $color-primary-light;
+        animation-name: iconAnimation;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+        animation-timing-function: ease;
+      }
+    }
+  }
+}
+@keyframes iconAnimation {
+  from {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(30deg);
+  }
+  50% {
+    transform: rotate(-30deg);
+  }
+  to {
+    transform: rotate(0);
+  }
+}
