@@ -3,13 +3,16 @@ import '../stylesheets/main.scss';
 import Header from './header';
 import Collapse from './collapse';
 import Footer from './footer';
+import Fill from './fill';
 
 function App() {
   return (
     <div /* className="App" */>
       <Header />
       <Collapse title='Diseña' />
-      <Collapse title='Rellena' />
+      <Collapse title='Rellena' icon='far fa-keyboard'>
+        <Fill></Fill>
+      </Collapse>
       <Collapse title='Comparte' icon='fas fa-share-alt' />
       <Footer />
     </div>
