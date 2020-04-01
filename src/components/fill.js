@@ -1,5 +1,6 @@
 import React from 'react';
 import Input from './input';
+import Label from './label';
 const Fill = props => {
   return (
     <section className='section--fill'>
@@ -7,9 +8,8 @@ const Fill = props => {
         {/* <!-- Formulario --> */}
         <form className='js-form form' action='/signup' method='post'>
           {/* <!-- Nombre --> */}
-          <label htmlFor='form--name'>
-            Nombre completo <span className='form-object'> *</span>
-          </label>
+          <Label For='form--name' text=' Nombre completo' />
+
           <Input id='form--name' type='text' name='form--name' placeholder='Ej: Sally Jill' />
 
           {/* <!-- Puesto --> */}
