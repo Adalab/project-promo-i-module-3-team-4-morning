@@ -1,52 +1,53 @@
 import React from 'react';
-
+import Input from './input';
 const Fill = props => {
   return (
-    <section class='section--fill'>
-      <div class='js-fill--div'>
+    <section className='section--fill'>
+      <div className='js-fill--div'>
         {/* <!-- Formulario --> */}
-        <form class='js-form form' action='/signup' method='post'>
+        <form className='js-form form' action='/signup' method='post'>
           {/* <!-- Nombre --> */}
-          <label for='form--name'>
-            Nombre completo <span class='form-object'> *</span>
+          <label htmlFor='form--name'>
+            Nombre completo <span className='form-object'> *</span>
           </label>
-          <input class='js-fill-name' id='form--name' type='text' name='form--name' placeholder='Ej: Sally Jill' required />
+          <Input id='form--name' type='text' name='form--name' placeholder='Ej: Sally Jill' />
+          <input className='js-fill-name' id='form--name' type='text' name='form--name' placeholder='Ej: Sally Jill' required />
           {/* <!-- Puesto --> */}
-          <label for='form--job'>
-            Puesto <span class='form-object'> *</span>
+          <label htmlFor='form--job'>
+            Puesto <span className='form-object'> *</span>
           </label>
-          <input class='js-fill-job' id='form--job' type='text' name='form--job' placeholder='Ej: Front-end unicorn' required />
+          <input className='js-fill-job' id='form--job' type='text' name='form--job' placeholder='Ej: Front-end unicorn' required />
           {/* <!-- Boton para subir imagen --> */}
-          <label for='form--img'>
-            Imagen de perfil<span class='form-object'> *</span>
+          <label htmlFor='form--img'>
+            Imagen de perfil<span className='form-object'> *</span>
           </label>
-          <div class='form--file'>
-            <input class='form--file__input js-fill-file' type='file' accept='image/png, .jpeg, .jpg, image/gif' />
+          <div className='form--file'>
+            <input className='form--file__input js-fill-file' type='file' accept='image/png, .jpeg, .jpg, image/gif' />
           </div>
-          <div class='form--button__container'>
-            <button class='form--button'>Añadir imagen</button>
-            <span class='form--button__box'></span>
+          <div className='form--button__container'>
+            <button className='form--button'>Añadir imagen</button>
+            <span className='form--button__box'></span>
           </div>
 
           {/* <!-- Correo electronico --> */}
-          <label for='form--email'>
-            Email <span class='form-object'> *</span>
+          <label htmlFor='form--email'>
+            Email <span className='form-object'> *</span>
           </label>
-          <input class='js-fill-email' type='email' id='form--email' name='form--email' placeholder='Ej: sally-hill@gmail.com' required />
+          <input className='js-fill-email' type='email' id='form--email' name='form--email' placeholder='Ej: sally-hill@gmail.com' required />
           {/* <!-- Telefono --> */}
-          <label for='form--phone'>
-            Teléfono <span class='form-object'> *</span>
+          <label htmlFor='form--phone'>
+            Teléfono <span className='form-object'> *</span>
           </label>
-          <input class='js-fill-tel' type='tel' id='form--phone' name='form--phone' placeholder='555-55-55-55' required />
+          <input className='js-fill-tel' type='tel' id='form--phone' name='form--phone' placeholder='555-55-55-55' required />
           {/* <!-- Linkedin --> */}
-          <label for='form--linkedin'>
-            Linkedin <span class='form-object'> *</span>
+          <label htmlFor='form--linkedin'>
+            Linkedin <span className='form-object'> *</span>
           </label>
-          <input class='js-fill-linkedin' id='form--linkedin' type='text' name='form--linkedin' placeholder='Ej: linkedin.com/in/sally.hill' required />
-          <label for='form--job'>
-            Github<span class='form-object'> *</span>
+          <input className='js-fill-linkedin' id='form--linkedin' type='text' name='form--linkedin' placeholder='Ej: linkedin.com/in/sally.hill' required />
+          <label htmlFor='form--job'>
+            Github<span className='form-object'> *</span>
           </label>
-          <input class='js-fill-github' id='form--github' type='text' name='form--github' placeholder='Ej: @sally-hill' required />
+          <input className='js-fill-github' id='form--github' type='text' name='form--github' placeholder='Ej: @sally-hill' required />
         </form>
       </div>
     </section>
