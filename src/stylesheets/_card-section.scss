@@ -5,6 +5,10 @@
   flex-direction: column;
   align-items: center;
 
+  &--container {
+    width: 240px;
+  }
+
   &--button {
     width: 75px;
     height: 30px;
@@ -18,9 +22,7 @@
     outline: none;
     margin: 0 0 20px 0;
   }
-  &--container {
-    width: 240px;
-  }
+
   &--card {
     background-color: $color-secondary-light;
     box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.35);
@@ -46,7 +48,24 @@
       border-left: solid 5px $color-primary-medium;
     }
   }
-
+  &--icons__container {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+  &--item {
+    margin-right: 10px;
+  }
+  &--link {
+    display: inline-block;
+    padding: 3px 5px;
+    color: $color-primary-dark;
+    border: solid 2px $color-primary-light;
+    border-radius: 50%;
+    text-decoration: none;
+  }
+  /* 
   &--item {
     display: inline-block;
     &__link1,
@@ -59,20 +78,19 @@
       border: solid 2px $color-primary-light;
       border-radius: 50%;
     }
-    &__link1 {
-      padding: 5px 8.5px 5px 9.5px;
-      margin-left: 20px;
-    }
-    &__link2 {
-      padding: 5.5px 5.5px 4.5px 6.5px;
-    }
-    &__link3 {
-      padding: 4.5px 6.5px 5.5px 7.5px;
-    }
-    &__link4 {
-      padding: 5.5px 6.25px 4.5px 6.75px;
-    }
+  &__link1 {
+    padding: 5px 8.5px 5px 9.5px;
+    margin-left: 20px;
   }
+  &__link2 {
+    padding: 5.5px 5.5px 4.5px 6.5px;
+  }
+  &__link3 {
+    padding: 4.5px 6.5px 5.5px 7.5px;
+  }
+  &__link4 {
+    padding: 5.5px 6.25px 4.5px 6.75px;
+  } */
 }
 
 @media all and (min-width: 768px) {
