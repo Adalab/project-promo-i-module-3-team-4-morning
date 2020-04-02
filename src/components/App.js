@@ -4,6 +4,7 @@ import Header from './header';
 import Collapse from './collapse';
 import Card from './Card';
 import Footer from './footer';
+import Fill from './fill';
 
 function App() {
   return (
@@ -11,7 +12,9 @@ function App() {
       <Header />
       <Card />
       <Collapse title='Diseña' />
-      <Collapse title='Rellena' />
+      <Collapse title='Rellena' icon='far fa-keyboard'>
+        <Fill></Fill>
+      </Collapse>
       <Collapse title='Comparte' icon='fas fa-share-alt' />
       <Footer />
     </div>
