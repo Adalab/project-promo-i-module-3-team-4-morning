@@ -10,12 +10,14 @@ function App() {
   return (
     <div /* className="App" */>
       <Header />
-      <Card />
-      <Collapse title='Diseña' />
-      <Collapse title='Rellena' icon='far fa-keyboard'>
-        <Fill></Fill>
-      </Collapse>
-      <Collapse title='Comparte' icon='fas fa-share-alt' />
+      <main className='main'>
+        <Card />
+        <Collapse title='Diseña' />
+        <Collapse title='Rellena' icon='far fa-keyboard'>
+          <Fill></Fill>
+        </Collapse>
+        <Collapse title='Comparte' icon='fas fa-share-alt' />
+      </main>
       <Footer />
     </div>
   );
