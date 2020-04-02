@@ -1,0 +1,115 @@
+.design {
+  padding-top: 30px;
+
+  &--container__1 {
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: space-between;
+  }
+  &--logo-design {
+    width: 21px;
+    height: 18px;
+    color: $color-secondary-dark;
+  }
+  &--title {
+    margin: -3px 0 0 -10px;
+    font-family: $font-primary;
+    font-size: 18px;
+    font-weight: 600;
+    color: $color-text-dark;
+    text-transform: uppercase;
+    position: absolute;
+    left: 61px;
+    @media all and(min-width:768px) {
+      margin-left: 10px;
+    }
+  }
+  &--logo-angleup {
+    width: 16px;
+    height: 18px;
+    color: $color-text-dark;
+    text-align: right;
+  }
+  &--container__2 {
+    display: flex;
+    // border-bottom: 1px solid $color-text-medium;
+    padding-bottom: 15px;
+    padding-top: 22px;
+    justify-content: space-between;
+  }
+  &--subtitle {
+    margin-left: 19px;
+    font-family: $font-primary;
+    font-size: 14px;
+    color: $color-text-dark;
+    text-transform: uppercase;
+    @media all and(min-width:768px) {
+      margin: 0;
+    }
+  }
+  &--form {
+    display: flex;
+    flex-direction: column;
+    &__item {
+      display: flex;
+      margin-bottom: 20px;
+    }
+  }
+  &--palette1,
+  &--palette2,
+  &--palette3 {
+    display: flex;
+    margin-left: 10px;
+  }
+  &--palette1 {
+    &__colorA {
+      width: 30px;
+      height: 25px;
+      background-color: #114e4e;
+    }
+    &__colorB {
+      width: 30px;
+      height: 25px;
+      background-color: #86a1a5;
+    }
+    &__colorC {
+      width: 30px;
+      height: 25px;
+      background-color: #a2deaf;
+    }
+  }
+  &--palette2 {
+    &__colorA {
+      width: 30px;
+      height: 25px;
+      background-color: #420101;
+    }
+    &__colorB {
+      width: 30px;
+      height: 25px;
+      background-color: #bd1010;
+    }
+    &__colorC {
+      width: 30px;
+      height: 25px;
+      background-color: #e95626;
+    }
+  }
+  &--palette3 {
+    &__colorA {
+      width: 30px;
+      height: 25px;
+      background-color: #3e5b65;
+    }
+    &__colorB {
+      width: 30px;
+      height: 25px;
+      background-color: #eab052;
+    }
+    &__colorC {
+      width: 30px;
+      height: 25px;
+      background-color: #a0c0cf;
+    }
+  }
+}
