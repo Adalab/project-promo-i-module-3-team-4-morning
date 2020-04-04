@@ -13,12 +13,10 @@ const Card = () => {
           <h2 className='card-sample--card__title'>Nombre Apellido</h2>
           <h3 className='card-sample--card__subtitle'>Front-end developer</h3>
           <img className='js-card-sample--card__img' src={PreviewPhoto} alt='imagen de ejemplo' />
-          <div className='card-sample--icons__container'>
-            <CardIcons icon='fas fa-mobile-alt' />
-            <CardIcons icon='far fa-envelope' />
-            <CardIcons icon='fab fa-linkedin-in' />
-            <CardIcons icon='fab fa-github-alt' />
-          </div>
+          <CardIcons classLink='card-sample--item__link1 js-card-sample--item__link js-tel-preview' icon='fas fa-mobile-alt' />
+          <CardIcons classLink='card-sample--item__link2 js-card-sample--item__link js-email-preview' icon='far fa-envelope' />
+          <CardIcons classLink='card-sample--item__link3 js-card-sample--item__link js-linkedin-preview' icon='fab fa-linkedin-in' />
+          <CardIcons classLink='card-sample--item__link4 js-card-sample--item__link js-github-preview' icon='fab fa-github-alt' />
         </div>
       </div>
     </section>
@@ -26,32 +24,3 @@ const Card = () => {
 };
 
 export default Card;
-
-/* <div class="card-sample--item">
-<a
-  class="card-sample--item__link1 js-card-sample--item__link js-tel-preview"
-  href=""
-  ><i class="fas fa-mobile-alt"></i
-></a>
-</div>
-<div class="card-sample--item">
-<a
-  class="card-sample--item__link2 js-card-sample--item__link js-email-preview"
-  href=""
-  ><i class="far fa-envelope"></i
-></a>
-</div>
-<div class="card-sample--item">
-<a
-  class="card-sample--item__link3 js-card-sample--item__link js-linkedin-preview"
-  href=""
-  ><i class="fab fa-linkedin-in"></i
-></a>
-</div>
-<div class="card-sample--item">
-<a
-  class="card-sample--item__link4 js-card-sample--item__link js-github-preview"
-  href=""
-  ><i class="fab fa-github-alt"></i
-></a>
-</div> */
