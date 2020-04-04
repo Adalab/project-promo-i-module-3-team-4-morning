@@ -102,6 +102,7 @@
   }
   &--button {
     color: $color-secondary-light;
+    padding-bottom: 7px;
     text-align: center;
     text-decoration: none;
     background-color: #00a0f5;
@@ -111,8 +112,10 @@
     width: 181px;
     height: 30px;
     border-radius: 3px;
+    border: none;
     padding-top: 5px;
     box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
+    outline: none;
 
     &__container {
       display: flex;
