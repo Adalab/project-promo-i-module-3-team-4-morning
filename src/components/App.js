@@ -1,24 +1,27 @@
-import React from "react";
-import "../stylesheets/main.scss";
-import Header from "./header";
-import Collapse from "./collapse";
-import Footer from "./footer";
-import Palettes from "./Palettes";
-import Card from "./Card";
-import Fill from "./fill";
+import React from 'react';
+import '../stylesheets/main.scss';
+import Header from './header';
+import Collapse from './collapse';
+import Footer from './footer';
+import Palettes from './Palettes';
+import Card from './Card';
+import Fill from './fill';
+import Share from './Share';
 
 function App() {
   return (
     <div /* className="App" */>
       <Header />
-      <main className="main">
+      <main className='main'>
         <Card />
-        <Collapse title="Diseña" icon="far fa-object-ungroup" />
+        <Collapse title='Diseña' icon='far fa-object-ungroup' />
         <Palettes />
-        <Collapse title="Rellena" icon="far fa-keyboard">
+        <Collapse title='Rellena' icon='far fa-keyboard'>
           <Fill></Fill>
         </Collapse>
-        <Collapse title="Comparte" icon="fas fa-share-alt" />
+        <Collapse title='Comparte' icon='fas fa-share-alt'>
+          <Share />
+        </Collapse>
       </main>
       <Footer />
     </div>
