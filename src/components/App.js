@@ -9,13 +9,14 @@ import Fill from './fill';
 import Share from './Share';
 
 function App() {
+  const handlePalette1 = () => {};
   return (
     <div /* className="App" */>
       <Header />
       <main className='main'>
         <Card />
         <Collapse title='Diseña' icon='far fa-object-ungroup' />
-        <Palettes />
+        <Palettes handleChange={handlePalette1} />
         <Collapse title='Rellena' icon='far fa-keyboard'>
           <Fill></Fill>
         </Collapse>
