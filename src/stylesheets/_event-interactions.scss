@@ -7,6 +7,16 @@
   color: #114e4e;
   border-left: solid 5px #438792;
 }
+.subtitle--palette-1 {
+  border-left: solid 5px #438792;
+}
+.link--palette-1 {
+  color: #114e4e;
+  border: solid 2px #a2deaf;
+}
+.link--palette-1:hover {
+  background-color: #a2deaf;
+}
 
 .title--palette-2 {
   color: #420101;
@@ -18,21 +28,12 @@
   border-left: solid 5px #eab052;
 }
 
-.subtitle--palette-1 {
-  border-left: solid 5px #438792;
-}
-
 .subtitle--palette-2 {
   border-left: solid 5px #bd1010;
 }
 
 .subtitle--palette-3 {
   border-left: solid 5px #eab052;
-}
-
-.link--palette-1 {
-  color: #114e4e;
-  border: solid 2px #a2deaf;
 }
 
 .link--palette-2 {
@@ -43,10 +44,6 @@
 .link--palette-3 {
   color: #3e5b65;
   border: solid 2px #a0c0cf;
-}
-
-.link--palette-1:hover {
-  background-color: #a2deaf;
 }
 
 .link--palette-2:hover {

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../stylesheets/main.scss';
 import Header from './header';
 import Collapse from './collapse';
@@ -9,12 +9,16 @@ import Fill from './fill';
 import Share from './Share';
 
 function App() {
-  const handlePalette1 = () => {};
+  const [palette, setPalette] = useState('1');
+  const handlePalette1 = (id) => {
+    setPalette(id);
+  };
+  console.log('state:' + palette);
   return (
     <div /* className="App" */>
       <Header />
       <main className='main'>
-        <Card />
+        <Card state={palette} />
         <Collapse title='Diseña' icon='far fa-object-ungroup' />
         <Palettes handleChange={handlePalette1} />
         <Collapse title='Rellena' icon='far fa-keyboard'>
