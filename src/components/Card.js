@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PreviewPhoto from '../images/preview-photo.jpg';
 import CardIcons from './CardIcons';
 

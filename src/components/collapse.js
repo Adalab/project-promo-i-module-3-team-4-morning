@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Collapse = props => {
+const Collapse = (props) => {
   return (
     <section>
       <div className='share js-share-title'>
@@ -8,7 +8,7 @@ const Collapse = props => {
           <i className={props.icon}></i>
         </span>
         <h3 className='share--text'>{props.title}</h3>
-        <a className='share--icon2'>
+        <a href='/' className='share--icon2'>
           <i className='js-arrow fas fa-angle-up'></i>
         </a>
       </div>
