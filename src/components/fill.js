@@ -1,7 +1,8 @@
 import React from 'react';
 import Input from './input';
 import Label from './label';
-const Fill = props => {
+import Image from './Image';
+const Fill = (props) => {
   return (
     <section className='section--fill'>
       <div className='js-fill--div'>
@@ -14,14 +15,7 @@ const Fill = props => {
           <Input id='form--job' type='text' name='form--job' placeholder='Ej: Front-end unicorn' />
 
           <Label For='form--img' text='Imagen de perfil' />
-          <div className='form--file'>
-            <Input className='form--file__input' type='file' name='form--job' />
-            {/* <input className='form--file__input js-fill-file' type='file' accept='image/png, .jpeg, .jpg, image/gif' /> */}
-          </div>
-          <div className='form--button__container'>
-            <button className='form--button'>Añadir imagen</button>
-            <span className='form--button__box'></span>
-          </div>
+          <Image />
 
           <Label For='form--email' text='Email' />
           <Input id='form--email' type='email' name='form--email' placeholder='Ej: sally-hill@gmail.com' />
