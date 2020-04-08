@@ -3,19 +3,21 @@ import Input from './input';
 import Label from './label';
 import Image from './Image';
 const Fill = (props) => {
+  console.log(props);
+
   return (
     <section className='section--fill'>
       <div className='js-fill--div'>
         {/* <!-- Formulario --> */}
         <form className='js-form form' action='/signup' method='post'>
           <Label For='form--name' text=' Nombre completo' />
-          <Input id='form--name' type='text' name='form--name' placeholder='Ej: Sally Jill' />
+          <Input handleImg={props.handleImg} id='form--name' type='text' name='form--name' placeholder='Ej: Sally Jill' />
 
           <Label For='form--job' text='Puesto' />
           <Input id='form--job' type='text' name='form--job' placeholder='Ej: Front-end unicorn' />
 
           <Label For='form--img' text='Imagen de perfil' />
-          <Image />
+          <Image handleImg={props.handleSubmit} />
 
           <Label For='form--email' text='Email' />
           <Input id='form--email' type='email' name='form--email' placeholder='Ej: sally-hill@gmail.com' />

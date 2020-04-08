@@ -24,8 +24,12 @@ class Image extends React.Component {
     this.setState({
       img: fr.result,
     });
+    this.props.handleImg(fr.result);
   }
+
   render() {
+    console.log(this.props);
+
     return (
       <>
         <div className='form--file'>
