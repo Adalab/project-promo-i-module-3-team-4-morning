@@ -29,7 +29,6 @@ class App extends React.Component {
     this.setState({
       palette: id,
     });
-    // setPalette(id);
   };
 
   handleCollapse1 = (id) => {
@@ -96,9 +95,6 @@ class App extends React.Component {
   };
 
   render() {
-    // const [palette, setPalette] = useState('1');
-    // const [iconStyle, setIconStyle] = useState('');
-
     return (
       <div>
         <Header />
