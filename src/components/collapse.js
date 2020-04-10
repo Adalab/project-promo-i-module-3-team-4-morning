@@ -2,7 +2,7 @@ import React from 'react';
 
 const Collapse = (props) => {
   function handleClick(ev) {
-    props.handleCollapse(ev.target.id);
+    props.handleCollapse(ev.currentTarget.id);
     // console.log('Me han clickado', ev.target.id);
   }
   console.log(props);
