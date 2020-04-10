@@ -112,7 +112,7 @@ class App extends React.Component {
       <div>
         <Header />
         <main className="main">
-          <Card state={this.state.palette} />
+          <Card state={this.state.palette} InputState={this.state} />
           <section className="information">
             <Collapse close={this.state.arrow1} id="collapse-1" title="Diseña" icon="far fa-object-ungroup" handleCollapse={this.handleCollapse1}>
               <Palettes handleChange={this.handlePalette1} display={this.state.colStyle1} />
