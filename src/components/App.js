@@ -19,14 +19,16 @@ function App() {
       <Header />
       <main className='main'>
         <Card state={palette} />
-        <Collapse title='Diseña' icon='far fa-object-ungroup' />
-        <Palettes handleChange={handlePalette1} />
-        <Collapse title='Rellena' icon='far fa-keyboard'>
-          <Fill></Fill>
-        </Collapse>
-        <Collapse title='Comparte' icon='fas fa-share-alt'>
-          <Share />
-        </Collapse>
+        <section className='information'>
+          <Collapse title='Diseña' icon='far fa-object-ungroup' />
+          <Palettes handleChange={handlePalette1} />
+          <Collapse title='Rellena' icon='far fa-keyboard'>
+            <Fill></Fill>
+          </Collapse>
+          <Collapse title='Comparte' icon='fas fa-share-alt'>
+            <Share />
+          </Collapse>
+        </section>
       </main>
       <Footer />
     </div>
