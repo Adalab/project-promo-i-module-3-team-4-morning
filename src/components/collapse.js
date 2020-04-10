@@ -1,11 +1,20 @@
 import React from 'react';
 
 const Collapse = (props) => {
+  let istrue;
   function handleClick(ev) {
     props.handleCollapse(ev.currentTarget.id);
+    // if (ev.currentTarget.id) {
+    //   istrue = true;
+    // } else {
+    //   istrue = false;
+    // }
+    // console.log(istrue);
+
     // console.log('Me han clickado', ev.target.id);
+    //aquí tengo que encontrar una manera de que cuando clicke de true o false, eso lo paso por handleCollapse y es lo que le meto al estado en App
   }
-  console.log(props);
+  // console.log(props);
 
   return (
     <section>

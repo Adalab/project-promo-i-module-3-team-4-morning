@@ -1,10 +1,10 @@
 import React from 'react';
 import Input from './input';
 import Label from './label';
-const Fill = props => {
+const Fill = (props) => {
   return (
     <section className='section--fill'>
-      <div className='js-fill--div'>
+      <div className={`js-fill--div ${props.display}`}>
         {/* <!-- Formulario --> */}
         <form className='js-form form' action='/signup' method='post'>
           <Label For='form--name' text=' Nombre completo' />
