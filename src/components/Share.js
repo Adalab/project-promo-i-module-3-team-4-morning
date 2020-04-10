@@ -1,10 +1,10 @@
 import React from 'react';
 import Button from './Button';
-const Share = () => {
+const Share = (props) => {
   return (
     <section className='section--share'>
       {/* <!-- Boton --> */}
-      <div className='js-share--div'>
+      <div className={`js-share--div ${props.display}`}>
         <div className='share--button__container'>
           <Button buttonClass='share--button js-btn' iconClass='far fa-address-card' text='Crear tarjeta' />
         </div>

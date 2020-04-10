@@ -2,9 +2,11 @@ import React from 'react';
 import Radio from './Palettes-radio';
 
 const Palettes = (props) => {
+  console.log(props);
+
   return (
     <section className='design'>
-      <div className='design--container__2'>
+      <div className={`design--container__2 ${props.display}`}>
         <p className='design--subtitle'>Colores</p>
         <form className='js-form design--form' action='' method='GET'>
           <Radio id='1' paletteClass='design--palette1' colorA='design--palette1__colorA' colorB='design--palette1__colorB' colorC='design--palette1__colorC' handlePalette1={props.handleChange} />
