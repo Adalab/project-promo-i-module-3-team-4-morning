@@ -42,6 +42,7 @@ class App extends React.Component {
       }
       return { arrow1: style };
     });
+
     this.setState((prevState, props) => {
       let style;
       if (prevState.colStyle1 === '') {
@@ -52,6 +53,7 @@ class App extends React.Component {
       return { colStyle1: style };
     });
   };
+
   handleCollapse2 = (id) => {
     this.setState((prevState, props) => {
       let style;
