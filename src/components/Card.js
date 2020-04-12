@@ -2,7 +2,6 @@ import React from 'react';
 import CardIcons from './CardIcons';
 
 const Card = (props) => {
-  console.log(props);
   return (
     <section className='card-sample'>
       <div className='card-sample--container'>

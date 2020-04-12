@@ -28,8 +28,6 @@ class Image extends React.Component {
   }
 
   render() {
-    console.log(this.props);
-
     return (
       <>
         <div className='form--file'>

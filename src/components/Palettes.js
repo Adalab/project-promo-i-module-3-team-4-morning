@@ -2,8 +2,6 @@ import React from 'react';
 import Radio from './Palettes-radio';
 
 const Palettes = (props) => {
-  console.log(props);
-
   return (
     <section className='design'>
       <div className={`design--container__2 ${props.display}`}>

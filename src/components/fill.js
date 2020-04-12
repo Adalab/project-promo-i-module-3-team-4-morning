@@ -3,7 +3,6 @@ import Input from './input';
 import Label from './label';
 import Image from './Image';
 const Fill = (props) => {
-  console.log(props);
   return (
     <section className='section--fill'>
       <div className={`js-fill--div ${props.display}`}>
