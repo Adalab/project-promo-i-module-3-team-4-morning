@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react";
+import PropTypes from "prop-types";
 
 class Input extends React.Component {
   handleInfoUser = (ev) => {
@@ -12,3 +13,12 @@ class Input extends React.Component {
   }
 }
 export default Input;
+Input.propTypes = {
+  className: PropTypes.string,
+  id: PropTypes.string,
+  type: PropTypes.string,
+  name: PropTypes.string,
+  placeholder: PropTypes.string,
+  value: PropTypes.string,
+  handleInfoUser: PropTypes.func,
+};
