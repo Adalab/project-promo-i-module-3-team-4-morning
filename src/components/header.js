@@ -1,21 +1,16 @@
-import React from 'react';
-import Logo from '../images/logo-awesome-profile-cards.svg';
+import React from "react";
+import Logo from "../images/logo-awesome-profile-cards.svg";
 const Header = () => {
-  return(
+  return (
     <header className="header">
       <div className="header__logo">
-        <img
-          className="logo"
-          src={Logo}
-          alt="Awesome profile cards"
-        />
+        <img className="logo" src={Logo} alt="Awesome profile cards" />
       </div>
     </header>
-    );
-}
+  );
+};
 
 export default Header;
-
 
 /* class Header extends React.Component{
   render (){
@@ -32,4 +27,3 @@ export default Header;
 );
 }
 } */
-

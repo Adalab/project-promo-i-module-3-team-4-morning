@@ -1,6 +1,6 @@
 import React from "react";
-import Input from "./input";
-import Label from "./label";
+import Input from "./Input";
+import Label from "./Label";
 import Image from "./Image";
 import PropTypes from "prop-types";
 
@@ -30,7 +30,7 @@ const Fill = (props) => {
           <Label for="form--phone" text="Teléfono" />
           <Input id="form--phone" type="tel" name="phone" placeholder="555-55-55-55" handleInfoUser={props.handleInfoUser} value={props.InputState.phone} />
 
-          <Label for="form--linkedin" text="Linkjedin" />
+          <Label for="form--linkedin" text="Linkedin" />
           <Input id="form--linkedin" type="text" name="linkedin" placeholder="Ej: linkedin.com/in/sally.hill" handleInfoUser={props.handleInfoUser} value={props.InputState.linkedin} />
 
           <Label for="form--github" text="Github" />
