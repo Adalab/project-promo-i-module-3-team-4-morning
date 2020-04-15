@@ -10,12 +10,12 @@ const Collapse = (props) => {
 
   return (
     <section>
-      <div id={props.id} onClick={handleClick} className='share js-share-title'>
+      <div id={props.id} onClick={handleClick} className='share'>
         <span className='share--icon1'>
           <i className={props.icon}></i>
         </span>
         <h3 className='share--text'>{props.title}</h3>
-        <i className={`js-arrow fas fa-angle-up ${props.close}`}></i>
+        <i className={`fas fa-angle-up ${props.close}`}></i>
       </div>
       <div>{props.children}</div>
     </section>
