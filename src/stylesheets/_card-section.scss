@@ -47,6 +47,14 @@
       padding: 0 0 0 20px;
       border-left: solid 5px $color-primary-medium;
     }
+    &__img-cont {
+      width: 240px;
+      height: 200px;
+    }
+    &__img {
+      height: 100%;
+      width: 100%;
+    }
   }
 
   &--item {
