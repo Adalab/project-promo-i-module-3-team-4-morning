@@ -1,5 +1,5 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const Collapse = (props) => {
   function handleClick(ev) {
@@ -10,14 +10,12 @@ const Collapse = (props) => {
 
   return (
     <section>
-      <div id={props.id} onClick={handleClick} className="share js-share-title">
-        <span className="share--icon1">
+      <div id={props.id} onClick={handleClick} className='share js-share-title'>
+        <span className='share--icon1'>
           <i className={props.icon}></i>
         </span>
-        <h3 className="share--text">{props.title}</h3>
-        <a href="/" className="share--icon2">
-          <i className={`js-arrow fas fa-angle-up ${props.close}`}></i>
-        </a>
+        <h3 className='share--text'>{props.title}</h3>
+        <i className={`js-arrow fas fa-angle-up ${props.close}`}></i>
       </div>
       <div>{props.children}</div>
     </section>
