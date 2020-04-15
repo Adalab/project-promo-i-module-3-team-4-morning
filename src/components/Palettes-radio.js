@@ -7,8 +7,8 @@ const Radio = (props) => {
   };
 
   return (
-    <label className='design--form__item' htmlFor={props.id}>
-      <input id={props.id} className={props.className} type='radio' name='select-palette' onChange={handleChange} />
+    <label className="design--form__item" htmlFor={props.id}>
+      <input id={props.id} className={props.className} type="radio" name="select-palette" onChange={handleChange} />
       <ColorsRadio paletteClass={props.paletteClass} colorA={props.colorA} colorB={props.colorB} colorC={props.colorC} />
     </label>
   );
