@@ -120,7 +120,7 @@ class App extends React.Component {
           <Card stateImg={this.state.img} statePalette={this.state.palette} InputState={this.state} />
           <section className="information">
             <Collapse close={this.state.arrow1} id="collapse-1" title="Diseña" icon="far fa-object-ungroup" handleCollapse={this.handleCollapse1}>
-              <Palettes handleChange={this.handlePalette1} display={this.state.colStyle1} />
+              <Palettes handleChange={this.handlePalette1} display={this.state.colStyle1} statePalette={this.state.palette} />
             </Collapse>
             <Collapse close={this.state.arrow2} id="collapse-2" title="Rellena" icon="far fa-keyboard" handleCollapse={this.handleCollapse2}>
               <Fill handleImg={this.handleImg} display={this.state.colStyle2} handleInfoUser={this.handleInfoUser} InputState={this.state}></Fill>
