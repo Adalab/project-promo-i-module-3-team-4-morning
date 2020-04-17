@@ -9,11 +9,14 @@ import Fill from './fill';
 import Share from './Share';
 import defaultImage from '../images/preview-photo.jpg';
 import { PostDataToApi } from '../services/PostDataToApi';
-let shareUrl = 'hola';
+// let shareUrl = 'hola';
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      cardUrl: 'algo',
+      cardSuccess: '',
+      cardErrorMessage: '',
       palette: '1',
       arrow1: '',
       arrow2: 'closed',
@@ -21,19 +24,20 @@ class App extends React.Component {
       colStyle1: '',
       colStyle2: 'hidden',
       colStyle3: 'hidden',
-      name: '',
-      job: '',
-      phone: '',
+      name: 'a',
+      job: 'a',
+      phone: '666666666',
       photo: defaultImage,
-      email: '',
-      linkedin: '',
-      github: '',
+      email: 'migueldelmazo@gmail.com',
+      linkedin: 'a',
+      github: 'a',
     };
     this.handlePalette1 = this.handlePalette1.bind(this);
     this.handleCollapse1 = this.handleCollapse1.bind(this);
     this.handleCollapse2 = this.handleCollapse2.bind(this);
     this.handleCollapse3 = this.handleCollapse3.bind(this);
     this.handleInfoUser = this.handleInfoUser.bind(this);
+    this.PostDataToApi = this.PostDataToApi.bind(this);
     this.handleImg = this.handleImg.bind(this);
   }
 
@@ -46,15 +50,20 @@ class App extends React.Component {
   //     shareURL = 'ERROR:' + result.error;
   //   }
   // }
-  PostDataToApi = () => {
+  PostDataToApi() {
     PostDataToApi(this.state)
-      .then(function (result) {
+      .then((result) => {
         console.log(result);
-
-        result === result.success ? (shareUrl = result.card) : (shareUrl = result.error);
+        this.setState({
+          cardSuccess: result.success,
+          cardUrl: result.cardURL || '',
+          cardErrorMessage: result.error || '',
+        });
       })
-      .catch(function (error) {});
-  };
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
 
   handlePalette1 = (id) => {
     this.setState({
@@ -134,7 +143,8 @@ class App extends React.Component {
   };
 
   render() {
-    console.log(shareUrl);
+    console.log(this.state);
+    debugger;
     return (
       <div>
         <Header />
@@ -148,7 +158,7 @@ class App extends React.Component {
               <Fill handleImg={this.handleImg} display={this.state.colStyle2} handleInfoUser={this.handleInfoUser} InputState={this.state}></Fill>
             </Collapse>
             <Collapse close={this.state.arrow3} id="collapse-3" title="Comparte" icon="fas fa-share-alt" handleCollapse={this.handleCollapse3}>
-              <Share display={this.state.colStyle3} url={shareUrl} PostDataToApi={this.PostDataToApi} />
+              <Share display={this.state.colStyle3} url={this.state.cardUrl || this.state.cardErrorMessage} PostDataToApi={this.PostDataToApi} />
             </Collapse>
           </section>
         </main>

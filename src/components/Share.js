@@ -7,7 +7,7 @@ const Share = (props) => {
 
     props.PostDataToApi();
   };
-
+  console.log(props);
   return (
     <section className="section--share">
       {/* <!-- Boton --> */}
