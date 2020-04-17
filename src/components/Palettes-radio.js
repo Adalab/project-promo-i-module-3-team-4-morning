@@ -1,5 +1,6 @@
 import React from 'react';
 import ColorsRadio from './Palettes-color-radio';
+import PropTypes from 'prop-types';
 
 const Radio = (props) => {
   const handleChange = (ev) => {
@@ -16,3 +17,12 @@ const Radio = (props) => {
 };
 
 export default Radio;
+Radio.propTypes = {
+  handlePalette1: PropTypes.func,
+  id: PropTypes.string,
+  className: PropTypes.string,
+  paletteClass: PropTypes.string,
+  colorA: PropTypes.string,
+  ColorB: PropTypes.string,
+  ColorC: PropTypes.string,
+};

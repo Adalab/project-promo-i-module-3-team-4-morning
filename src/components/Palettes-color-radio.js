@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const ColorsRadio = (props) => {
   return (
@@ -10,3 +11,9 @@ const ColorsRadio = (props) => {
   );
 };
 export default ColorsRadio;
+ColorsRadio.propTypes = {
+  paletteClass: PropTypes.string,
+  colorA: PropTypes.string,
+  ColorB: PropTypes.string,
+  ColorC: PropTypes.string,
+};

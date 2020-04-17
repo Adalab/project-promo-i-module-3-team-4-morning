@@ -1,5 +1,6 @@
 import React from 'react';
 import Radio from './Palettes-radio';
+import PropTypes from 'prop-types';
 
 const Palettes = (props) => {
   return (
@@ -19,3 +20,7 @@ const Palettes = (props) => {
 };
 
 export default Palettes;
+Palettes.propTypes = {
+  display: PropTypes.string,
+  handleChange: PropTypes.func,
+};
