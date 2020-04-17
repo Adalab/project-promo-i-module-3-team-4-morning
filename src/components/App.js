@@ -1,7 +1,7 @@
 import React from 'react';
 import '../stylesheets/main.scss';
 import Header from './header';
-import Collapse from './collapse';
+import Collapse from './Collapse';
 import Footer from './footer';
 import Palettes from './Palettes';
 import Card from './Card';
@@ -9,32 +9,6 @@ import Fill from './fill';
 import Share from './Share';
 import defaultImage from '../images/preview-photo.jpg';
 
-// function App() {
-//   const [palette, setPalette] = useState('1');
-//   const [img, setImg] = useState(defaultImage);
-//   const handlePalette1 = (id) => {
-//     setPalette(id);
-//   };
-//   const handleImg = (img) => {
-//     setImg(img);
-//   };
-//   return (
-//     <div /* className="App" */>
-//       <Header />
-//       <main className='main'>
-//         <Card statePalette={palette} stateImg={img} handleImg={handleImg} />
-//         <Collapse title='Diseña' icon='far fa-object-ungroup' />
-//         <Palettes handleChange={handlePalette1} />
-//         <Collapse title='Rellena' icon='far fa-keyboard'>
-//           <Fill handleImg={handleImg}></Fill>
-//         </Collapse>
-//         <Collapse title='Comparte' icon='fas fa-share-alt'>
-//           <Share />
-//         </Collapse>
-//       </main>
-//       <Footer />
-//     </div>
-//   );
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -142,16 +116,16 @@ class App extends React.Component {
     return (
       <div>
         <Header />
-        <main className='main'>
+        <main className="main">
           <Card stateImg={this.state.img} statePalette={this.state.palette} InputState={this.state} />
-          <section className='information'>
-            <Collapse close={this.state.arrow1} id='collapse-1' title='Diseña' icon='far fa-object-ungroup' handleCollapse={this.handleCollapse1}>
+          <section className="information">
+            <Collapse close={this.state.arrow1} id="collapse-1" title="Diseña" icon="far fa-object-ungroup" handleCollapse={this.handleCollapse1}>
               <Palettes handleChange={this.handlePalette1} display={this.state.colStyle1} />
             </Collapse>
-            <Collapse close={this.state.arrow2} id='collapse-2' title='Rellena' icon='far fa-keyboard' handleCollapse={this.handleCollapse2}>
+            <Collapse close={this.state.arrow2} id="collapse-2" title="Rellena" icon="far fa-keyboard" handleCollapse={this.handleCollapse2}>
               <Fill handleImg={this.handleImg} display={this.state.colStyle2} handleInfoUser={this.handleInfoUser} InputState={this.state}></Fill>
             </Collapse>
-            <Collapse close={this.state.arrow3} id='collapse-3' title='Comparte' icon='fas fa-share-alt' handleCollapse={this.handleCollapse3}>
+            <Collapse close={this.state.arrow3} id="collapse-3" title="Comparte" icon="fas fa-share-alt" handleCollapse={this.handleCollapse3}>
               <Share display={this.state.colStyle3} />
             </Collapse>
           </section>
