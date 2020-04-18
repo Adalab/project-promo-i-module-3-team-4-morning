@@ -1,6 +1,7 @@
 import React from 'react';
 import Input from './Input';
 import defaultImage from '../images/preview-photo.jpg';
+import PropTypes from 'prop-types';
 
 const fr = new FileReader();
 class Image extends React.Component {
@@ -8,7 +9,7 @@ class Image extends React.Component {
     super(props);
     this.fileInput = React.createRef();
     this.state = {
-      photo: defaultImage,
+      img: defaultImage,
     };
     this.handleImg = this.handleImg.bind(this);
     this.writeImg = this.writeImg.bind(this);
@@ -22,7 +23,7 @@ class Image extends React.Component {
 
   writeImg() {
     this.setState({
-      photo: fr.result,
+      img: fr.result,
     });
     this.props.handleImg(fr.result);
   }
@@ -32,11 +33,11 @@ class Image extends React.Component {
       <>
         <div className='form--file'>
           <Input className='form--file__input' type='file' name='form--file' />
-          <input onChange={this.handleImg} ref={this.fileInput} className='form--file__input js-fill-file' type='file' accept='image/png, .jpeg, .jpg, image/gif' />
+          <input onChange={this.handleImg} ref={this.fileInput} className='form--file__input' type='file' accept='image/png, .jpeg, .jpg, image/gif' />
         </div>
         <div className='form--button__container'>
           <button className='form--button'>Añadir imagen</button>
-          <img src={this.state.photo} className='form--button__box' alt='previsualización de la imagen' />
+          <img src={this.state.img} className='form--button__box' alt='previsualización de la imagen' />
         </div>
       </>
     );
@@ -44,3 +45,7 @@ class Image extends React.Component {
 }
 
 export default Image;
+
+Image.propTypes = {
+  handleImg: PropTypes.func,
+};
