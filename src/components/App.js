@@ -41,6 +41,23 @@ class App extends React.Component {
     this.handleImg = this.handleImg.bind(this);
   }
 
+  componentDidMount() {
+    let lsInfo = JSON.parse(localStorage.getItem('data'));
+    if (lsInfo !== null) {
+      this.setState({
+        palette: lsInfo.palette,
+        name: lsInfo.name,
+        job: lsInfo.job,
+        phone: lsInfo.phone,
+        photo: lsInfo.photo,
+        email: lsInfo.email,
+        linkedin: lsInfo.linkedin,
+        github: lsInfo.github,
+      });
+    }
+    console.log(lsInfo);
+  }
+
   PostDataToApi() {
     PostDataToApi(this.state)
       .then((result) => {
@@ -54,6 +71,10 @@ class App extends React.Component {
       .catch(function (error) {
         console.log(error);
       });
+  }
+
+  componentDidUpdate() {
+    localStorage.setItem('data', JSON.stringify(this.state));
   }
 
   handlePalette1 = (id) => {

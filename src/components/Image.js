@@ -25,6 +25,7 @@ class Image extends React.Component {
     this.setState({
       img: fr.result,
     });
+    this.fileInput.current.value = '';
     this.props.handleImg(fr.result);
   }
 
