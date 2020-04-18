@@ -15,9 +15,7 @@ const Collapse = (props) => {
           <i className={props.icon}></i>
         </span>
         <h3 className='share--text'>{props.title}</h3>
-        <a href='/' className='share--icon2'>
-          <i className={`js-arrow fas fa-angle-up ${props.close}`}></i>
-        </a>
+        <i className={`fas fa-angle-up ${props.close}`}></i>
       </div>
       {props.children}
     </section>

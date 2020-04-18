@@ -1,3 +1,4 @@
+
 import React from 'react';
 import '../stylesheets/main.scss';
 import Header from './Header';
@@ -8,6 +9,7 @@ import Card from './Card';
 import Fill from './Fill';
 import Share from './Share';
 import defaultImage from '../images/preview-photo.jpg';
+
 
 class App extends React.Component {
   constructor(props) {
