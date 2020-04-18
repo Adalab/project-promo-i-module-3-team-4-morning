@@ -7,7 +7,7 @@ const Share = (props) => {
       {/* <!-- Boton --> */}
       <div className={props.display}>
         <div className='share--button__container'>
-          <Button buttonClass='share--button js-btn' iconClass='far fa-address-card' text='Crear tarjeta' />
+          <Button buttonClass='share--button' iconClass='far fa-address-card' text='Crear tarjeta' />
         </div>
         {/* <!-- Tarjeta Creada --> */}
         <div className='share--card--created'>
