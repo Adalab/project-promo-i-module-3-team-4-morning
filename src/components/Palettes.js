@@ -7,7 +7,7 @@ const Palettes = (props) => {
     <div className={`design--container__2 ${props.display}`}>
       <p className='design--subtitle'>Colores</p>
       <form className='js-form design--form' action='' method='GET'>
-        <Radio id='1' paletteClass='design--palette1' colorA='design--palette1__colorA' colorB='design--palette1__colorB' colorC='design--palette1__colorC' handlePalette1={props.handleChange} />
+        <Radio id='1' paletteClass='design--palette1' colorA='design--palette1__colorA' colorB='design--palette1__colorB' colorC='design--palette1__colorC' handlePalette1={props.handleChange} statePalette={props.statePalette} />
 
         <Radio id='2' paletteClass='design--palette2' colorA='design--palette2__colorA' colorB='design--palette2__colorB' colorC='design--palette2__colorC' handlePalette1={props.handleChange} />
 

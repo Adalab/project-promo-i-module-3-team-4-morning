@@ -1,7 +1,7 @@
-import React from "react";
-import Input from "./input";
-import defaultImage from "../images/preview-photo.jpg";
-import PropTypes from "prop-types";
+import React from 'react';
+import Input from './input';
+import defaultImage from '../images/preview-photo.jpg';
+import PropTypes from 'prop-types';
 
 const fr = new FileReader();
 class Image extends React.Component {
@@ -17,7 +17,7 @@ class Image extends React.Component {
 
   handleImg() {
     const myFile = this.fileInput.current.files[0];
-    fr.addEventListener("load", this.writeImg);
+    fr.addEventListener('load', this.writeImg);
     fr.readAsDataURL(myFile);
   }
 
