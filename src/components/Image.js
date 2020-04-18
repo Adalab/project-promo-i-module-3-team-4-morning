@@ -1,5 +1,5 @@
 import React from 'react';
-import Input from './input';
+import Input from './Input';
 import defaultImage from '../images/preview-photo.jpg';
 import PropTypes from 'prop-types';
 

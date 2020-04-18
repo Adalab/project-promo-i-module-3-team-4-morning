@@ -1,11 +1,11 @@
 import React from 'react';
 import '../stylesheets/main.scss';
-import Header from './header';
+import Header from './Header';
 import Collapse from './Collapse';
-import Footer from './footer';
+import Footer from './Footer';
 import Palettes from './Palettes';
 import Card from './Card';
-import Fill from './fill';
+import Fill from './Fill';
 import Share from './Share';
 import defaultImage from '../images/preview-photo.jpg';
 
