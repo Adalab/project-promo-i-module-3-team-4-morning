@@ -1,20 +1,20 @@
 import React from 'react';
 import '../stylesheets/main.scss';
-import Header from './header';
-import Collapse from './collapse';
-import Footer from './footer';
+import Header from './Header';
+import Collapse from './Collapse';
+import Footer from './Footer';
 import Palettes from './Palettes';
 import Card from './Card';
-import Fill from './fill';
+import Fill from './Fill';
 import Share from './Share';
 import defaultImage from '../images/preview-photo.jpg';
 import { PostDataToApi } from '../services/PostDataToApi';
-// let shareUrl = 'hola';
+
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      cardUrl: 'algo',
+      cardUrl: '',
       cardSuccess: '',
       cardErrorMessage: '',
       palette: '1',
@@ -24,13 +24,13 @@ class App extends React.Component {
       colStyle1: '',
       colStyle2: 'hidden',
       colStyle3: 'hidden',
-      name: 'a',
-      job: 'a',
-      phone: '666666666',
+      name: '',
+      job: '',
+      phone: '',
       photo: defaultImage,
-      email: 'migueldelmazo@gmail.com',
-      linkedin: 'a',
-      github: 'a',
+      email: '',
+      linkedin: '',
+      github: '',
     };
     this.handlePalette1 = this.handlePalette1.bind(this);
     this.handleCollapse1 = this.handleCollapse1.bind(this);
@@ -41,15 +41,6 @@ class App extends React.Component {
     this.handleImg = this.handleImg.bind(this);
   }
 
-  // showURL(result) {
-  //   console.log(result);
-
-  //   if (result.success) {
-  //     return ( shareURL = '<a href=' + result.cardURL + '>' + result.cardURL + '</a>');
-  //   } else {
-  //     shareURL = 'ERROR:' + result.error;
-  //   }
-  // }
   PostDataToApi() {
     PostDataToApi(this.state)
       .then((result) => {
@@ -144,20 +135,20 @@ class App extends React.Component {
 
   render() {
     console.log(this.state);
-    debugger;
+
     return (
       <div>
         <Header />
-        <main className="main">
+        <main className='main'>
           <Card stateImg={this.state.photo} statePalette={this.state.palette} InputState={this.state} />
-          <section className="information">
-            <Collapse close={this.state.arrow1} id="collapse-1" title="Diseña" icon="far fa-object-ungroup" handleCollapse={this.handleCollapse1}>
+          <section className='information'>
+            <Collapse close={this.state.arrow1} id='collapse-1' title='Diseña' icon='far fa-object-ungroup' handleCollapse={this.handleCollapse1}>
               <Palettes handleChange={this.handlePalette1} display={this.state.colStyle1} />
             </Collapse>
-            <Collapse close={this.state.arrow2} id="collapse-2" title="Rellena" icon="far fa-keyboard" handleCollapse={this.handleCollapse2}>
+            <Collapse close={this.state.arrow2} id='collapse-2' title='Rellena' icon='far fa-keyboard' handleCollapse={this.handleCollapse2}>
               <Fill handleImg={this.handleImg} display={this.state.colStyle2} handleInfoUser={this.handleInfoUser} InputState={this.state}></Fill>
             </Collapse>
-            <Collapse close={this.state.arrow3} id="collapse-3" title="Comparte" icon="fas fa-share-alt" handleCollapse={this.handleCollapse3}>
+            <Collapse close={this.state.arrow3} id='collapse-3' title='Comparte' icon='fas fa-share-alt' handleCollapse={this.handleCollapse3}>
               <Share display={this.state.colStyle3} url={this.state.cardUrl || this.state.cardErrorMessage} PostDataToApi={this.PostDataToApi} />
             </Collapse>
           </section>

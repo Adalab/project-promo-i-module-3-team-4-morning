@@ -1,6 +1,6 @@
 import React from 'react';
-import Input from './input';
-import Label from './label';
+import Input from './Input';
+import Label from './Label';
 import Image from './Image';
 const Fill = (props) => {
   return (
