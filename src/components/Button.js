@@ -1,9 +1,9 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const Button = (props) => {
   return (
-    <button className={props.buttonClass}>
+    <button className={props.buttonClass} href={props.href}>
       <i className={props.iconClass}></i> {props.text}
     </button>
   );
