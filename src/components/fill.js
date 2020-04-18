@@ -1,16 +1,16 @@
 import React from 'react';
-import Input from './input';
-import Label from './label';
+import Input from './Input';
+import Label from './Label';
 import Image from './Image';
 import PropTypes from 'prop-types';
 
 const Fill = (props) => {
   return (
-    <section className="section--fill">
-      <div className={`js-fill--div ${props.display}`}>
+    <>
+      <div className={props.display}>
         {/* <!-- Formulario --> */}
         {/* handleImg={props.handleImg} */}
-        <form className="js-form form" action="/signup" method="post">
+        <form className="form" action="/signup" method="post">
           <Label For="form--name" text=" Nombre completo" />
           <Input id="form--name" type="text" name="name" placeholder="Ej: Sally Jill" handleInfoUser={props.handleInfoUser} value={props.InputState.name} />
 
@@ -30,14 +30,14 @@ const Fill = (props) => {
           <Label For="form--phone" text="Teléfono" />
           <Input id="form--phone" type="tel" name="phone" placeholder="555-55-55-55" handleInfoUser={props.handleInfoUser} value={props.InputState.phone} />
 
-          <Label For="form--linkedin" text="Linkjedin" />
+          <Label For="form--linkedin" text="Linkedin" />
           <Input id="form--linkedin" type="text" name="linkedin" placeholder="Ej: linkedin.com/in/sally.hill" handleInfoUser={props.handleInfoUser} value={props.InputState.linkedin} />
 
           <Label For="form--github" text="Github" />
           <Input id="form--github" type="text" name="github" placeholder="Ej: github.com/sally-hill" handleInfoUser={props.handleInfoUser} value={props.InputState.github} />
         </form>
       </div>
-    </section>
+    </>
   );
 };
 

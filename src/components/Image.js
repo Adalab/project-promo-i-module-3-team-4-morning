@@ -1,5 +1,5 @@
 import React from 'react';
-import Input from './input';
+import Input from './Input';
 import defaultImage from '../images/preview-photo.jpg';
 import PropTypes from 'prop-types';
 
@@ -33,7 +33,7 @@ class Image extends React.Component {
       <>
         <div className="form--file">
           <Input className="form--file__input" type="file" name="form--file" />
-          <input onChange={this.handleImg} ref={this.fileInput} className="form--file__input js-fill-file" type="file" accept="image/png, .jpeg, .jpg, image/gif" />
+          <input onChange={this.handleImg} ref={this.fileInput} className="form--file__input" type="file" accept="image/png, .jpeg, .jpg, image/gif" />
         </div>
         <div className="form--button__container">
           <button className="form--button">Añadir imagen</button>
