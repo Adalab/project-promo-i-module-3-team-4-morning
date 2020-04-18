@@ -38,7 +38,7 @@ class Image extends React.Component {
         </div>
         <div className="form--button__container">
           <button className="form--button">Añadir imagen</button>
-          <img src={this.state.img} className="form--button__box" alt="previsualización de la imagen" />
+          <img src={this.props.photo} className="form--button__box" alt="previsualización de la imagen" />
         </div>
       </>
     );

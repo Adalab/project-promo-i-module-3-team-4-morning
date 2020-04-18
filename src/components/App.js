@@ -167,7 +167,7 @@ class App extends React.Component {
               <Palettes handleChange={this.handlePalette1} display={this.state.colStyle1} statePalette={this.state.palette} />
             </Collapse>
             <Collapse margin="section--fill" close={this.state.arrow2} id="collapse-2" title="Rellena" icon="far fa-keyboard" colClass="title" handleCollapse={this.handleCollapse2}>
-              <Fill handleImg={this.handleImg} display={this.state.colStyle2} handleInfoUser={this.handleInfoUser} InputState={this.state}></Fill>
+              <Fill handleImg={this.handleImg} display={this.state.colStyle2} handleInfoUser={this.handleInfoUser} InputState={this.state} photo={this.state.photo}></Fill>
             </Collapse>
             <Collapse margin="section--share" close={this.state.arrow3} id="collapse-3" title="Comparte" icon="fas fa-share-alt" colClass={'share'} handleCollapse={this.handleCollapse3}>
               <Share display={this.state.colStyle3} url={this.state.cardUrl || this.state.cardErrorMessage} PostDataToApi={this.PostDataToApi} />

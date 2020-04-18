@@ -19,7 +19,7 @@ const Fill = (props) => {
 
           <Label For="form--img" text="Imagen de perfil" />
           <div className="form--file">
-            <Image handleImg={props.handleImg} />
+            <Image handleImg={props.handleImg} photo={props.photo} />
             {/* <Input className="form--file__input" type="file" name="photo" handleImg={props.handleImg}/> */}
             {/* <input className='form--file__input js-fill-file' type='file' accept='image/png, .jpeg, .jpg, image/gif' /> */}
           </div>
