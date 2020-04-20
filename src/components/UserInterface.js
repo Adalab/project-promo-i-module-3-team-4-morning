@@ -9,6 +9,7 @@ import Fill from './Fill';
 import Share from './Share';
 import defaultImage from '../images/preview-photo.jpg';
 import { PostDataToApi } from '../services/PostDataToApi';
+import swal from 'sweetalert';
 
 class UserInterface extends React.Component {
   constructor(props) {
@@ -39,6 +40,8 @@ class UserInterface extends React.Component {
     this.handleInfoUser = this.handleInfoUser.bind(this);
     this.PostDataToApi = this.PostDataToApi.bind(this);
     this.handleImg = this.handleImg.bind(this);
+    this.confirmReset = this.confirmReset.bind(this);
+    this.handleReset = this.handleReset.bind(this);
   }
 
   componentDidMount() {
@@ -151,12 +154,39 @@ class UserInterface extends React.Component {
     this.setState({ photo });
   };
 
+  handleReset(target) {
+    console.log('app', target);
+    this.setState({
+      palette: '1',
+      name: '',
+      job: '',
+      phone: '',
+      photo: defaultImage,
+      email: '',
+      linkedin: '',
+      github: '',
+    });
+  }
+  confirmReset() {
+    swal({
+      icon: 'warning',
+      title: '¿Estás seguro de que lo quieres borrar todo?',
+      buttons: ['no', 'sí!'],
+      closeOnClickOutside: true,
+    }).then((value) => {
+      console.log(value);
+      if (value !== null) {
+        this.handleReset();
+      }
+    });
+  }
+
   render() {
     return (
       <div>
         <Header />
         <main className='main'>
-          <Card stateImg={this.state.photo} statePalette={this.state.palette} InputState={this.state} />
+          <Card stateImg={this.state.photo} confirmReset={this.confirmReset} statePalette={this.state.palette} InputState={this.state} />
           <section className='information'>
             <Collapse margin='design' close={this.state.arrow1} id='collapse-1' title='Diseña' icon='far fa-object-ungroup' colClass='design--container__1' handleCollapse={this.handleCollapse1}>
               <Palettes handleChange={this.handlePalette1} display={this.state.colStyle1} statePalette={this.state.palette} />
