@@ -4,10 +4,8 @@ import PropTypes from 'prop-types';
 const Collapse = (props) => {
   function handleClick(ev) {
     props.handleCollapse(ev.currentTarget.id);
-
-    //aquí tengo que encontrar una manera de que cuando clicke de true o false, eso lo paso por handleCollapse y es lo que le meto al estado en App
   }
-  // "share js-share-title"
+
   return (
     <section className={props.margin}>
       <div id={props.id} onClick={handleClick} className={props.colClass}>

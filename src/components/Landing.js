@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../images/logo-awesome-profile-cards.svg';
 import Footer from './Footer';
-import UserInterface from './UserInterface';
 const Landing = () => {
   return (
     <>
@@ -36,9 +35,6 @@ const Landing = () => {
           <Link className='landing--button' to='/userinterface'>
             comenzar
           </Link>
-          {/* <a className='landing--button' href='./app.html'>
-            comenzar
-          </a> */}
         </div>
       </main>
       <Footer />

@@ -7,7 +7,6 @@ const Share = (props) => {
 
     props.PostDataToApi();
   };
-  console.log(props);
   return (
     <div className={props.display}>
       <div className='share--button__container'>
@@ -15,7 +14,6 @@ const Share = (props) => {
           <i className='far fa-address-card'></i>Crear tarjeta
         </button>
       </div>
-      {/* <!-- Tarjeta Creada --> */}
       <div className='share--card--created'>
         <div className='share--card--created--text'>La tarjeta ha sido creada</div>
         <div className='share--card--created--awesome-prof'>{props.url}</div>

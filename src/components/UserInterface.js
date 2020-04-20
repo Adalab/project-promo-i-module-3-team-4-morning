@@ -55,13 +55,11 @@ class UserInterface extends React.Component {
         github: lsInfo.github,
       });
     }
-    console.log(lsInfo);
   }
 
   PostDataToApi() {
     PostDataToApi(this.state)
       .then((result) => {
-        console.log(result);
         this.setState({
           cardSuccess: result.success,
           cardUrl: result.cardURL || '',
@@ -146,7 +144,6 @@ class UserInterface extends React.Component {
     });
   };
   handleInfoUser = (name, value) => {
-    // const { name, value } = ev;
     this.setState({ [name]: value });
   };
 
@@ -155,8 +152,6 @@ class UserInterface extends React.Component {
   };
 
   render() {
-    console.log(this.state);
-
     return (
       <div>
         <Header />
