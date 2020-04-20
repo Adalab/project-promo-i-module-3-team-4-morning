@@ -9,6 +9,7 @@ import Fill from './Fill';
 import Share from './Share';
 import defaultImage from '../images/preview-photo.jpg';
 import { PostDataToApi } from '../services/PostDataToApi';
+import swal from 'sweetalert';
 
 class App extends React.Component {
   constructor(props) {
@@ -17,13 +18,13 @@ class App extends React.Component {
       cardUrl: '',
       cardSuccess: '',
       cardErrorMessage: '',
-      palette: '1',
       arrow1: '',
       arrow2: 'closed',
       arrow3: 'closed',
       colStyle1: '',
       colStyle2: 'hidden',
       colStyle3: 'hidden',
+      palette: '1',
       name: '',
       job: '',
       phone: '',
@@ -39,6 +40,8 @@ class App extends React.Component {
     this.handleInfoUser = this.handleInfoUser.bind(this);
     this.PostDataToApi = this.PostDataToApi.bind(this);
     this.handleImg = this.handleImg.bind(this);
+    this.confirmReset = this.confirmReset.bind(this);
+    this.handleReset = this.handleReset.bind(this);
   }
 
   componentDidMount() {
@@ -154,22 +157,47 @@ class App extends React.Component {
     this.setState({ photo });
   };
 
-  render() {
-    console.log(this.state);
+  handleReset(target) {
+    console.log('app', target);
+    this.setState({
+      palette: '1',
+      name: '',
+      job: '',
+      phone: '',
+      photo: defaultImage,
+      email: '',
+      linkedin: '',
+      github: '',
+    });
+  }
+  confirmReset() {
+    swal({
+      icon: 'warning',
+      title: '¿Estás seguro de que lo quieres borrar todo?',
+      buttons: ['no', 'sí!'],
+      closeOnClickOutside: true,
+    }).then((value) => {
+      console.log(value);
+      if (value !== null) {
+        this.handleReset();
+      }
+    });
+  }
 
+  render() {
     return (
       <div>
         <Header />
-        <main className="main">
-          <Card stateImg={this.state.photo} statePalette={this.state.palette} InputState={this.state} />
-          <section className="information">
-            <Collapse margin="design" close={this.state.arrow1} id="collapse-1" title="Diseña" icon="far fa-object-ungroup" colClass="design--container__1" handleCollapse={this.handleCollapse1}>
+        <main className='main'>
+          <Card stateImg={this.state.photo} confirmReset={this.confirmReset} statePalette={this.state.palette} InputState={this.state} />
+          <section className='information'>
+            <Collapse margin='design' close={this.state.arrow1} id='collapse-1' title='Diseña' icon='far fa-object-ungroup' colClass='design--container__1' handleCollapse={this.handleCollapse1}>
               <Palettes handleChange={this.handlePalette1} display={this.state.colStyle1} statePalette={this.state.palette} />
             </Collapse>
-            <Collapse margin="section--fill" close={this.state.arrow2} id="collapse-2" title="Rellena" icon="far fa-keyboard" colClass="title" handleCollapse={this.handleCollapse2}>
+            <Collapse margin='section--fill' close={this.state.arrow2} id='collapse-2' title='Rellena' icon='far fa-keyboard' colClass='title' handleCollapse={this.handleCollapse2}>
               <Fill handleImg={this.handleImg} display={this.state.colStyle2} handleInfoUser={this.handleInfoUser} InputState={this.state} photo={this.state.photo}></Fill>
             </Collapse>
-            <Collapse margin="section--share" close={this.state.arrow3} id="collapse-3" title="Comparte" icon="fas fa-share-alt" colClass={'share'} handleCollapse={this.handleCollapse3}>
+            <Collapse margin='section--share' close={this.state.arrow3} id='collapse-3' title='Comparte' icon='fas fa-share-alt' colClass={'share'} handleCollapse={this.handleCollapse3}>
               <Share display={this.state.colStyle3} url={this.state.cardUrl || this.state.cardErrorMessage} PostDataToApi={this.PostDataToApi} />
             </Collapse>
           </section>
