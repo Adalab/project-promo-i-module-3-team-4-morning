@@ -32,13 +32,13 @@ class Image extends React.Component {
   render() {
     return (
       <>
-        <div className="form--file">
-          <Input className="form--file__input" type="file" name="form--file" />
-          <input onChange={this.handleImg} ref={this.fileInput} className="form--file__input" type="file" accept="image/png, .jpeg, .jpg, image/gif" />
+        <div className='form--file'>
+          <Input className='form--file__input' type='file' name='form--file' />
+          <input onChange={this.handleImg} ref={this.fileInput} className='form--file__input' type='file' accept='image/png, .jpeg, .jpg, image/gif' />
         </div>
-        <div className="form--button__container">
-          <button className="form--button">Añadir imagen</button>
-          <img src={this.props.photo} className="form--button__box" alt="previsualización de la imagen" />
+        <div className='form--button__container'>
+          <button className='form--button'>Añadir imagen</button>
+          <img src={this.props.photo} className='form--button__box' alt='previsualización de la imagen' />
         </div>
       </>
     );
