@@ -15,5 +15,10 @@
     "static/media/logo-awesome-profile-cards.svg": "/static/media/logo-awesome-profile-cards.0118e311.svg",
     "static/media/preview-photo.jpg": "/static/media/preview-photo.010da22f.jpg"
   },
-  "entrypoints": ["static/js/runtime-main.60ee1bcd.js", "static/js/2.aa36c27c.chunk.js", "static/css/main.a5b8066f.chunk.css", "static/js/main.e61fa5d9.chunk.js"]
+  "entrypoints": [
+    "static/js/runtime-main.60ee1bcd.js",
+    "static/js/2.aa36c27c.chunk.js",
+    "static/css/main.a5b8066f.chunk.css",
+    "static/js/main.e61fa5d9.chunk.js"
+  ]
 }
