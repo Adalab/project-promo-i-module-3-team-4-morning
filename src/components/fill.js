@@ -8,7 +8,7 @@ const Fill = (props) => {
   return (
     <>
       <div className={props.display}>
-        <form className='form' action='/signup' method='post'>
+        <form onChange={props.handleActiveBtn} className='form' action='/signup' method='post'>
           <Label For='form--name' text=' Nombre completo' />
           <Input id='form--name' type='text' name='name' placeholder='Ej: Sally Jill' handleInfoUser={props.handleInfoUser} value={props.InputState.name} />
 

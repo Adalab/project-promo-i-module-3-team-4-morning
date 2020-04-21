@@ -10,7 +10,7 @@ import Share from './Share';
 import defaultImage from '../images/preview-photo.jpg';
 import { PostDataToApi } from '../services/PostDataToApi';
 import swal from 'sweetalert';
-
+let isActive;
 class UserInterface extends React.Component {
   constructor(props) {
     super(props);
@@ -42,6 +42,7 @@ class UserInterface extends React.Component {
     this.handleImg = this.handleImg.bind(this);
     this.confirmReset = this.confirmReset.bind(this);
     this.handleReset = this.handleReset.bind(this);
+    this.handleActiveBtn = this.handleActiveBtn.bind(this);
   }
 
   componentDidMount() {
@@ -181,7 +182,33 @@ class UserInterface extends React.Component {
     });
   }
 
+  handleActiveBtn() {
+    debugger;
+    if (this.state.name === '' || this.state.job === '' || this.state.photo === defaultImage || this.state.email === '' || this.state.linkedin === '' || this.state.phone === '' || this.state.github === '') {
+      isActive = '';
+    } else {
+      isActive = 'js-share--button';
+    }
+    return isActive;
+  }
+
+  // handle el botón de comparte
+  // function handleButton() {
+  //   if (getInputGithub.value === '' || getInputJob.value === '' || getInputName.value === '' || getInputPhone.value === '' || getInputMail.value === '' || getInputLinkedin.value === '') {
+  //     btn.classList.remove('js-share--button');
+  //   } else {
+  //     btn.classList.add('js-share--button');
+  //   }
+  // }
+
+  // function hide() {
+  //   const getCardCreated = document.querySelector('.js-card-created');
+  //   getCardCreated.classList.remove('hidden');
+  //   createCardURL();
+  // }
   render() {
+    console.log(isActive);
+
     return (
       <div>
         <Header />
@@ -192,10 +219,10 @@ class UserInterface extends React.Component {
               <Palettes handleChange={this.handlePalette1} display={this.state.colStyle1} statePalette={this.state.palette} />
             </Collapse>
             <Collapse margin='section--fill' close={this.state.arrow2} id='collapse-2' title='Rellena' icon='far fa-keyboard' colClass='title' handleCollapse={this.handleCollapse2}>
-              <Fill handleImg={this.handleImg} display={this.state.colStyle2} handleInfoUser={this.handleInfoUser} InputState={this.state} photo={this.state.photo}></Fill>
+              <Fill handleActiveBtn={this.handleActiveBtn} handleImg={this.handleImg} display={this.state.colStyle2} handleInfoUser={this.handleInfoUser} InputState={this.state} photo={this.state.photo}></Fill>
             </Collapse>
             <Collapse margin='section--share' close={this.state.arrow3} id='collapse-3' title='Comparte' icon='fas fa-share-alt' colClass={'share'} handleCollapse={this.handleCollapse3}>
-              <Share display={this.state.colStyle3} url={this.state.cardUrl || this.state.cardErrorMessage} PostDataToApi={this.PostDataToApi} />
+              <Share active={isActive} display={this.state.colStyle3} url={this.state.cardUrl || this.state.cardErrorMessage} PostDataToApi={this.PostDataToApi} />
             </Collapse>
           </section>
         </main>
