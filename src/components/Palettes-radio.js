@@ -8,8 +8,8 @@ const Radio = (props) => {
   };
 
   return (
-    <label className='design--form__item' htmlFor={props.id}>
-      <input id={props.id} className={props.className} type='radio' name='select-palette' onChange={handleChange} value={props.statePalette} defaultChecked={props.statePalette} />
+    <label className="design--form__item" htmlFor={props.id}>
+      <input id={props.id} className={props.className} type="radio" name="select-palette" onChange={handleChange} value={props.statePalette} checked={props.statePalette === props.id} />
       <ColorsRadio paletteClass={props.paletteClass} colorA={props.colorA} colorB={props.colorB} colorC={props.colorC} />
     </label>
   );
