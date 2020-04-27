@@ -183,29 +183,13 @@ class UserInterface extends React.Component {
   }
 
   handleActiveBtn() {
-    debugger;
     if (this.state.name === '' || this.state.job === '' || this.state.photo === defaultImage || this.state.email === '' || this.state.linkedin === '' || this.state.phone === '' || this.state.github === '') {
-      isActive = '';
+      return (isActive = '');
     } else {
-      isActive = 'js-share--button';
+      return (isActive = 'js-share--button');
     }
-    return isActive;
   }
 
-  // handle el botón de comparte
-  // function handleButton() {
-  //   if (getInputGithub.value === '' || getInputJob.value === '' || getInputName.value === '' || getInputPhone.value === '' || getInputMail.value === '' || getInputLinkedin.value === '') {
-  //     btn.classList.remove('js-share--button');
-  //   } else {
-  //     btn.classList.add('js-share--button');
-  //   }
-  // }
-
-  // function hide() {
-  //   const getCardCreated = document.querySelector('.js-card-created');
-  //   getCardCreated.classList.remove('hidden');
-  //   createCardURL();
-  // }
   render() {
     console.log(isActive);
 
@@ -222,7 +206,7 @@ class UserInterface extends React.Component {
               <Fill handleActiveBtn={this.handleActiveBtn} handleImg={this.handleImg} display={this.state.colStyle2} handleInfoUser={this.handleInfoUser} InputState={this.state} photo={this.state.photo}></Fill>
             </Collapse>
             <Collapse margin='section--share' close={this.state.arrow3} id='collapse-3' title='Comparte' icon='fas fa-share-alt' colClass={'share'} handleCollapse={this.handleCollapse3}>
-              <Share active={isActive} display={this.state.colStyle3} url={this.state.cardUrl || this.state.cardErrorMessage} PostDataToApi={this.PostDataToApi} />
+              <Share active={this.handleActiveBtn()} display={this.state.colStyle3} url={this.state.cardUrl || this.state.cardErrorMessage} PostDataToApi={this.PostDataToApi} />
             </Collapse>
           </section>
         </main>
