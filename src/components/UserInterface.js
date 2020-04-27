@@ -79,13 +79,13 @@ class UserInterface extends React.Component {
     localStorage.setItem('data', JSON.stringify(this.state));
   }
 
-  handlePalette1 = (id) => {
+  handlePalette1(id) {
     this.setState({
       palette: id,
     });
-  };
+  }
 
-  handleCollapse1 = (id) => {
+  handleCollapse1(id) {
     this.setState((prevState, props) => {
       let style;
       if (prevState.arrow1 === '') {
@@ -105,9 +105,9 @@ class UserInterface extends React.Component {
       }
       return { colStyle1: style };
     });
-  };
+  }
 
-  handleCollapse2 = (id) => {
+  handleCollapse2(id) {
     this.setState((prevState, props) => {
       let style;
       if (prevState.arrow2 === '') {
@@ -126,8 +126,8 @@ class UserInterface extends React.Component {
       }
       return { colStyle2: style };
     });
-  };
-  handleCollapse3 = (id) => {
+  }
+  handleCollapse3(id) {
     this.setState((prevState, props) => {
       let style;
       if (prevState.arrow3 === '') {
@@ -146,14 +146,14 @@ class UserInterface extends React.Component {
       }
       return { colStyle3: style };
     });
-  };
-  handleInfoUser = (name, value) => {
+  }
+  handleInfoUser(name, value) {
     this.setState({ [name]: value });
-  };
+  }
 
-  handleImg = (photo) => {
+  handleImg(photo) {
     this.setState({ photo });
-  };
+  }
 
   handleReset(target) {
     console.log('app', target);
