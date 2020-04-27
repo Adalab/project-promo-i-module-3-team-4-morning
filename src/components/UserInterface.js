@@ -19,9 +19,9 @@ class UserInterface extends React.Component {
       cardSuccess: '',
       cardErrorMessage: '',
       palette: '1',
-      arrow1: '',
-      arrow2: 'closed',
-      arrow3: 'closed',
+      // arrow1: '',
+      // arrow2: 'closed',
+      // arrow3: 'closed',
       colStyle1: '',
       colStyle2: 'hidden',
       colStyle3: 'hidden',
@@ -86,15 +86,15 @@ class UserInterface extends React.Component {
   };
 
   handleCollapse1 = (id) => {
-    this.setState((prevState, props) => {
-      let style;
-      if (prevState.arrow1 === '') {
-        style = 'closed';
-      } else {
-        style = '';
-      }
-      return { arrow1: style };
-    });
+    // this.setState((prevState, props) => {
+    //   let style;
+    //   if (prevState.arrow1 === '') {
+    //     style = 'closed';
+    //   } else {
+    //     style = '';
+    //   }
+    //   return { arrow1: style };
+    // });
 
     this.setState((prevState, props) => {
       let style;
@@ -108,15 +108,15 @@ class UserInterface extends React.Component {
   };
 
   handleCollapse2 = (id) => {
-    this.setState((prevState, props) => {
-      let style;
-      if (prevState.arrow2 === '') {
-        style = 'closed';
-      } else {
-        style = '';
-      }
-      return { arrow2: style };
-    });
+    // this.setState((prevState, props) => {
+    //   let style;
+    //   if (prevState.arrow2 === '') {
+    //     style = 'closed';
+    //   } else {
+    //     style = '';
+    //   }
+    //   return { arrow2: style };
+    // });
     this.setState((prevState, props) => {
       let style;
       if (prevState.colStyle2 === '') {
@@ -128,15 +128,15 @@ class UserInterface extends React.Component {
     });
   };
   handleCollapse3 = (id) => {
-    this.setState((prevState, props) => {
-      let style;
-      if (prevState.arrow3 === '') {
-        style = 'closed';
-      } else {
-        style = '';
-      }
-      return { arrow3: style };
-    });
+    // this.setState((prevState, props) => {
+    //   let style;
+    //   if (prevState.arrow3 === '') {
+    //     style = 'closed';
+    //   } else {
+    //     style = '';
+    //   }
+    //   return { arrow3: style };
+    // });
     this.setState((prevState, props) => {
       let style;
       if (prevState.colStyle3 === '') {
@@ -183,13 +183,13 @@ class UserInterface extends React.Component {
   }
 
   handleActiveBtn() {
-    debugger;
+    // debugger;
     if (this.state.name === '' || this.state.job === '' || this.state.photo === defaultImage || this.state.email === '' || this.state.linkedin === '' || this.state.phone === '' || this.state.github === '') {
-      isActive = '';
+      return (isActive = '');
     } else {
-      isActive = 'js-share--button';
+      return (isActive = 'js-share--button');
     }
-    return isActive;
+    // return isActive;
   }
 
   // handle el botón de comparte
@@ -215,14 +215,14 @@ class UserInterface extends React.Component {
         <main className='main'>
           <Card stateImg={this.state.photo} confirmReset={this.confirmReset} statePalette={this.state.palette} InputState={this.state} />
           <section className='information'>
-            <Collapse margin='design' close={this.state.arrow1} id='collapse-1' title='Diseña' icon='far fa-object-ungroup' colClass='design--container__1' handleCollapse={this.handleCollapse1}>
+            <Collapse margin='design' id='collapse-1' title='Diseña' icon='far fa-object-ungroup' colClass='design--container__1' handleCollapse={this.handleCollapse1}>
               <Palettes handleChange={this.handlePalette1} display={this.state.colStyle1} statePalette={this.state.palette} />
             </Collapse>
-            <Collapse margin='section--fill' close={this.state.arrow2} id='collapse-2' title='Rellena' icon='far fa-keyboard' colClass='title' handleCollapse={this.handleCollapse2}>
+            <Collapse margin='section--fill' id='collapse-2' title='Rellena' icon='far fa-keyboard' colClass='title' handleCollapse={this.handleCollapse2}>
               <Fill handleActiveBtn={this.handleActiveBtn} handleImg={this.handleImg} display={this.state.colStyle2} handleInfoUser={this.handleInfoUser} InputState={this.state} photo={this.state.photo}></Fill>
             </Collapse>
-            <Collapse margin='section--share' close={this.state.arrow3} id='collapse-3' title='Comparte' icon='fas fa-share-alt' colClass={'share'} handleCollapse={this.handleCollapse3}>
-              <Share active={isActive} display={this.state.colStyle3} url={this.state.cardUrl || this.state.cardErrorMessage} PostDataToApi={this.PostDataToApi} />
+            <Collapse margin='section--share' id='collapse-3' title='Comparte' icon='fas fa-share-alt' colClass={'share'} handleCollapse={this.handleCollapse3}>
+              <Share active={this.handleActiveBtn()} display={this.state.colStyle3} url={this.state.cardUrl || this.state.cardErrorMessage} PostDataToApi={this.PostDataToApi} />
             </Collapse>
           </section>
         </main>
