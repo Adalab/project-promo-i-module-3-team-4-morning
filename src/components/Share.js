@@ -20,7 +20,7 @@ const Share = (props) => {
       <div className={`share--card--created ${isHidden}`}>
         <h3 className='share--card--created--text'>La tarjeta ha sido creada</h3>
         <p className='share--card--created--awesome-prof'>{props.url}</p>
-        <a className='share--card--created--button' href={`https://twitter.com/intent/tweet?text=Hey!%20Mira%20que%20tarjeta%20he%20creado%20${props.url}`}>
+        <a target='_blank' rel='noopener noreferrer' className='share--card--created--button' href={`https://twitter.com/intent/tweet?text=Hey!%20Mira%20que%20tarjeta%20he%20creado%20${props.url}`}>
           <i className='fab fa-twitter'></i> Compartir en twitter
         </a>
       </div>
