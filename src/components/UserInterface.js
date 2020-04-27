@@ -85,8 +85,8 @@ class UserInterface extends React.Component {
     });
   }
 
-  handleCollapse1(id) {
-    this.setState((prevState, props) => {
+  handleCollapse1() {
+    this.setState((prevState) => {
       let style;
       if (prevState.arrow1 === '') {
         style = 'closed';
@@ -96,7 +96,7 @@ class UserInterface extends React.Component {
       return { arrow1: style };
     });
 
-    this.setState((prevState, props) => {
+    this.setState((prevState) => {
       let style;
       if (prevState.colStyle1 === '') {
         style = 'hidden';
@@ -107,7 +107,7 @@ class UserInterface extends React.Component {
     });
   }
 
-  handleCollapse2(id) {
+  handleCollapse2() {
     this.setState((prevState, props) => {
       let style;
       if (prevState.arrow2 === '') {
@@ -127,8 +127,8 @@ class UserInterface extends React.Component {
       return { colStyle2: style };
     });
   }
-  handleCollapse3(id) {
-    this.setState((prevState, props) => {
+  handleCollapse3() {
+    this.setState((prevState) => {
       let style;
       if (prevState.arrow3 === '') {
         style = 'closed';
@@ -137,7 +137,7 @@ class UserInterface extends React.Component {
       }
       return { arrow3: style };
     });
-    this.setState((prevState, props) => {
+    this.setState((prevState) => {
       let style;
       if (prevState.colStyle3 === '') {
         style = 'hidden';
