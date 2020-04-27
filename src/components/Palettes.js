@@ -3,7 +3,6 @@ import Radio from './Palettes-radio';
 import PropTypes from 'prop-types';
 
 const Palettes = (props) => {
-  console.log(props.statePalette);
   return (
     <div className={`design--container__2 ${props.display}`}>
       <p className="design--subtitle">Colores</p>

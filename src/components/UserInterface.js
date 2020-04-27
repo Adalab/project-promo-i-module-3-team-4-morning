@@ -156,7 +156,6 @@ class UserInterface extends React.Component {
   }
 
   handleReset(target) {
-    console.log('app', target);
     this.setState({
       palette: '1',
       name: '',
@@ -175,7 +174,6 @@ class UserInterface extends React.Component {
       buttons: ['no', 'sí!'],
       closeOnClickOutside: true,
     }).then((value) => {
-      console.log(value);
       if (value !== null) {
         this.handleReset();
       }
@@ -191,21 +189,19 @@ class UserInterface extends React.Component {
   }
 
   render() {
-    console.log(isActive);
-
     return (
       <div>
         <Header />
-        <main className='main'>
+        <main className="main">
           <Card stateImg={this.state.photo} confirmReset={this.confirmReset} statePalette={this.state.palette} InputState={this.state} />
-          <section className='information'>
-            <Collapse margin='design' close={this.state.arrow1} id='collapse-1' title='Diseña' icon='far fa-object-ungroup' colClass='design--container__1' handleCollapse={this.handleCollapse1}>
+          <section className="information">
+            <Collapse margin="design" close={this.state.arrow1} id="collapse-1" title="Diseña" icon="far fa-object-ungroup" colClass="design--container__1" handleCollapse={this.handleCollapse1}>
               <Palettes handleChange={this.handlePalette1} display={this.state.colStyle1} statePalette={this.state.palette} />
             </Collapse>
-            <Collapse margin='section--fill' close={this.state.arrow2} id='collapse-2' title='Rellena' icon='far fa-keyboard' colClass='title' handleCollapse={this.handleCollapse2}>
+            <Collapse margin="section--fill" close={this.state.arrow2} id="collapse-2" title="Rellena" icon="far fa-keyboard" colClass="title" handleCollapse={this.handleCollapse2}>
               <Fill handleActiveBtn={this.handleActiveBtn} handleImg={this.handleImg} display={this.state.colStyle2} handleInfoUser={this.handleInfoUser} InputState={this.state} photo={this.state.photo}></Fill>
             </Collapse>
-            <Collapse margin='section--share' close={this.state.arrow3} id='collapse-3' title='Comparte' icon='fas fa-share-alt' colClass={'share'} handleCollapse={this.handleCollapse3}>
+            <Collapse margin="section--share" close={this.state.arrow3} id="collapse-3" title="Comparte" icon="fas fa-share-alt" colClass={'share'} handleCollapse={this.handleCollapse3}>
               <Share active={this.handleActiveBtn()} display={this.state.colStyle3} url={this.state.cardUrl || this.state.cardErrorMessage} PostDataToApi={this.PostDataToApi} />
             </Collapse>
           </section>
